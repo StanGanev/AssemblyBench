@@ -1,0 +1,13 @@
+<div class="row">
+  <div class="col-md-5">
+    <app-bench-list (pcWasSelected)="selectedPc = $event"></app-bench-list>
+  </div>
+  <div class="col-md-7">
+    <app-bench-detail 
+    *ngIf="selectedPc; else infoText"
+    [pc]="selectedPc"></app-bench-detail>
+    <ng-template #infoText>
+      <h2>Please select computer to view!</h2>
+    </ng-template>
+  </div>
+</div>
