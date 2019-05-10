@@ -17,4 +17,8 @@ export class PcPartsComponent implements OnInit {
   ngOnInit() {
   }
 
+  onPartAdded(part: Part) {
+    this.parts.push(part);
+  }
+
 }
