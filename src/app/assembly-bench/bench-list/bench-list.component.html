@@ -6,10 +6,9 @@
 <hr>
 <div class="row">
   <div class="col-xs-12">
-    <app-bench-item 
-    *ngFor="let pc of assebledPcs" 
-    [personalComputer]="pc"
-    (pcSelected)="onPcSelected(pc)"
-    ></app-bench-item>
+    <!-- Old just for reference <app-bench-item *ngFor="let pc of assebledPcs" [personalComputer]="pc" (pcSelected)="onPcSelected(pc)"> 
+    </app-bench-item> -->
+    <app-bench-item *ngFor="let pc of assebledPcs" [personalComputer]="pc">
+    </app-bench-item>
   </div>
 </div>

@@ -9,6 +9,7 @@ import { BenchDetailComponent } from './assembly-bench/bench-detail/bench-detail
 import { BenchListComponent } from './assembly-bench/bench-list/bench-list.component';
 import { PartsEditComponent } from './pc-parts/parts-edit/parts-edit.component';
 import { BenchItemComponent } from './assembly-bench/bench-list/bench-item/bench-item.component';
+import { DropwdownDirective } from './shared/dropwdown.directive';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { BenchItemComponent } from './assembly-bench/bench-list/bench-item/bench
     BenchDetailComponent,
     BenchListComponent,
     PartsEditComponent,
-    BenchItemComponent
+    BenchItemComponent,
+    DropwdownDirective
   ],
   imports: [
     BrowserModule
