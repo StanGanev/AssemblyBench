@@ -1,5 +1,6 @@
-import { Component, OnInit, ElementRef, ViewChild, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { Part } from 'src/app/shared/part.model';
+import { PcPartsService } from '../pc-parts.service';
 
 
 @Component({
@@ -10,9 +11,10 @@ import { Part } from 'src/app/shared/part.model';
 export class PartsEditComponent implements OnInit {
   @ViewChild('partName') partNameRef: ElementRef;
   @ViewChild('partPrice') partPriceRef: ElementRef;
-  @Output() partAdded = new EventEmitter<Part>();
+  /* Old just for reference
+  @Output() partAdded = new EventEmitter<Part>(); */
 
-  constructor() { }
+  constructor(private pcPartsService: PcPartsService) { }
 
   ngOnInit() {
   }
@@ -21,7 +23,9 @@ export class PartsEditComponent implements OnInit {
     const name = this.partNameRef.nativeElement.value;
     const price = this.partPriceRef.nativeElement.value;
     const newPart = new Part(name,price);
-    this.partAdded.emit(newPart); 
+    /* Old just for reference
+    this.partAdded.emit(newPart); */ 
+    this.pcPartsService.addPart(newPart);
   }
 
 }

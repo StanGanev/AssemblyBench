@@ -9,7 +9,7 @@ import { BenchService } from '../bench-list.service';
 })
 export class BenchListComponent implements OnInit {
   // Old just for reference @Output() pcWasSelected = new EventEmitter<Pc>();
-  assebledPcs: Pc[];
+  assebledPcs: Pc[] = [];
  
   /* Old just for reference
     assebledPcs: Pc[] = [

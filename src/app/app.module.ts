@@ -10,6 +10,7 @@ import { BenchListComponent } from './assembly-bench/bench-list/bench-list.compo
 import { PartsEditComponent } from './pc-parts/parts-edit/parts-edit.component';
 import { BenchItemComponent } from './assembly-bench/bench-list/bench-item/bench-item.component';
 import { DropwdownDirective } from './shared/dropwdown.directive';
+import { PcPartsService } from './pc-parts/pc-parts.service';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,7 @@ import { DropwdownDirective } from './shared/dropwdown.directive';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [PcPartsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
