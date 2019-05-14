@@ -15,18 +15,20 @@
         Mannage Pc <span class="caret"></span>
       </button>
       <ul class="dropdown-menu">
-        <li><a href="#">To Parts</a></li>
-        <li><a href="#">Edit Pc</a></li>
-        <li><a href="#">Delete Pc</a></li>
+        <li><a>To Cart</a></li>
+        <li><a>Edit Pc</a></li>
+        <li><a>Delete Pc</a></li>
       </ul>
     </div>
   </div>
 </div>
 <div class="row">
   <div class="col-xs-12" *ngIf="pc">
-    <p>{{pc.cpu}}</p>
-    <p>{{pc.gpu}}</p>
-    <p>{{pc.hdd}}</p>
-    <p>{{pc.ram}}</p>
+    <ul class="list-group">
+      <li class="list-group-item">CPU: {{pc.cpu}}</li>
+      <li class="list-group-item">GPU: {{pc.gpu}}</li>
+      <li class="list-group-item">HDD: {{pc.hdd}}</li>
+      <li class="list-group-item">RAM: {{pc.ram}}</li>
+    </ul>
   </div>
 </div>

@@ -4,11 +4,13 @@
     <app-bench-list></app-bench-list>
   </div>
   <div class="col-md-7">
+    <!-- Old just for reference 
     <app-bench-detail 
     *ngIf="selectedPc; else infoText"
     [pc]="selectedPc"></app-bench-detail>
     <ng-template #infoText>
       <h2>Please select computer to view!</h2>
-    </ng-template>
+    </ng-template> -->
+    <router-outlet></router-outlet>
   </div>
 </div>

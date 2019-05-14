@@ -1,6 +1,5 @@
-import { Component, OnInit, Input} from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Pc } from '../../pc.model';
-import { BenchService } from '../../bench-list.service';
 
 @Component({
   selector: 'app-bench-item',
@@ -9,16 +8,17 @@ import { BenchService } from '../../bench-list.service';
 })
 export class BenchItemComponent implements OnInit {
   @Input() personalComputer: Pc;
+  @Input() index: number;
   // Old just for reference @Output() pcSelected = new EventEmitter<void>();
-
-  constructor(private benchService: BenchService) { }
+  constructor() { }
 
   ngOnInit() {
   }
 
+  /* Old just for reference
   onSelected() {
   // Old just for reference  this.pcSelected.emit();
     this.benchService.pcSelected.emit(this.personalComputer);
-  }
+  } */
 
 }

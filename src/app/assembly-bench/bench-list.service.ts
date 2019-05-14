@@ -18,4 +18,8 @@ export class BenchService {
           // return copy of assebledPcs
           return this.assebledPcs.slice();
       }
+
+      getPc(index: number) {
+          return this.assebledPcs[index];
+      }
 }

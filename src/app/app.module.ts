@@ -11,6 +11,9 @@ import { PartsEditComponent } from './pc-parts/parts-edit/parts-edit.component';
 import { BenchItemComponent } from './assembly-bench/bench-list/bench-item/bench-item.component';
 import { DropwdownDirective } from './shared/dropwdown.directive';
 import { PcPartsService } from './pc-parts/pc-parts.service';
+import { AppRoutingModule } from './app-routing.module';
+import { BenchStartComponent } from './assembly-bench/bench-start/bench-start.component';
+import { ContentNotFoundComponent } from './content-not-found/content-not-found.component';
 
 @NgModule({
   declarations: [
@@ -22,10 +25,13 @@ import { PcPartsService } from './pc-parts/pc-parts.service';
     BenchListComponent,
     PartsEditComponent,
     BenchItemComponent,
-    DropwdownDirective
+    DropwdownDirective,
+    BenchStartComponent,
+    ContentNotFoundComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [PcPartsService],
   bootstrap: [AppComponent]

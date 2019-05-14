@@ -1,10 +1,11 @@
-<!--The content below is only a placeholder and can be replaced.-->
 <app-header (argumentSelected)="onNavigate($event)"></app-header>
 <div class="container">
   <div class="row">
     <div class="col-md-12">
+      <router-outlet></router-outlet>
+      <!-- Old just for reference 
       <app-assembly-bench *ngIf="loadedArgument === 'bench'"></app-assembly-bench>
-      <app-pc-parts *ngIf="loadedArgument === 'parts'"></app-pc-parts>
+      <app-pc-parts *ngIf="loadedArgument === 'parts'"></app-pc-parts> -->
     </div>
   </div>
 </div>
