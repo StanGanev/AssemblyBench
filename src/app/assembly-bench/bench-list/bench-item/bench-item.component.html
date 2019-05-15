@@ -1,4 +1,6 @@
-<a href="#" class="list-group-item clearfix" (click)="onSelected()">
+<!-- Old just for reference 
+<a class="list-group-item clearfix" (click)="onSelected()" *ngIf="personalComputer"> -->
+<a [routerLink]="[index]" class="list-group-item clearfix" *ngIf="personalComputer" routerLinkActive="active">
   <div class="pull-left">
     <h4 class="list-group-item-heading">{{personalComputer.name}}</h4>
     <p class="list-group-item-text">CPU: {{personalComputer.cpu}}</p>

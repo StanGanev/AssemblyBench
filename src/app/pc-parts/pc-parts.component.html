@@ -1,9 +1,11 @@
 <div class="row">
   <div class="col-xs-10">
+    <!-- Old just for reference <app-parts-edit
+    (partAdded)="onPartAdded($event)"></app-parts-edit> -->
     <app-parts-edit></app-parts-edit>
     <hr>
     <ul class="list-group">
-      <a class="list-group-item" style="cursor: pointer" *ngFor="let part of parts">
+      <a class="list-group-item" *ngFor="let part of parts">
       {{ part.name }}  ({{part.price}})
       </a>
     </ul>
